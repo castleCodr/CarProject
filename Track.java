@@ -4,7 +4,6 @@ public class Track {
         this.distance = distance;
         this.trackName = trackName;
     }
-
     private int lapSpeed;
     private int difficulty;
     private int distance;
@@ -34,13 +33,16 @@ public class Track {
     }
 
     private String trackName;
-
-    public double getSpeed(Car car) {
+    public double getSpeed(Car car){
         double speed = car.getSpeedMph();
-        double trueDiff = Math.max(difficulty / Math.pow(car.getHandling(), 2), 0);
-        trueDiff = Math.min(trueDiff, .75);
-        speed -= speed * trueDiff;
-        speed += car.getVariability() * (Math.random() - .5) * speed;
+        double trueDiff = Math.max(difficulty/Math.pow(car.getHandling(),2),0);
+        trueDiff = Math.min(trueDiff,.75);
+        speed -= speed*trueDiff;
+        speed += car.getVariability()*(Math.random()-.5)*speed;
         return speed;
     }
+
+
+
+
 }

@@ -1,4 +1,5 @@
 public class RaceTest {
+
     public static void main(String[] args) {
         Car car1 = new Car(100,5.0,.1,"Lambo");
         Car car2 = new Car(100,5.0,1,"Ferarri");
