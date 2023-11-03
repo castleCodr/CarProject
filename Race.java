@@ -1,15 +1,14 @@
 public class Race {
+    private Car car1;
+    private Car car2;
+    private Track track;
+    private int laps;
     public Race(Car car1, Car car2, Track track, int laps) {
         this.car1 = car1;
         this.car2 = car2;
         this.track = track;
         this.laps = laps;
     }
-
-    private Car car1;
-    private Car car2;
-    private Track track;
-    private int laps;
     public String simulateRace(){
         double car1Time = 0;
         double car2Time = 0;
