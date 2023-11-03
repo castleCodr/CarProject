@@ -48,5 +48,5 @@ public class Car {
             time += 60/track.getSpeed(this);
         }
         return time;
-    };
+    }
 }
