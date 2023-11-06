@@ -6,6 +6,19 @@ public class Race {
     private Car winner;
     private double car1Time;
     private double car2Time;
+
+    public Car getWinner() {
+        return winner;
+    }
+
+    public double getCar1Time() {
+        return car1Time;
+    }
+
+    public double getCar2Time() {
+        return car2Time;
+    }
+
     public Race(Car car1, Car car2, Track track, int laps) {
         this.car1 = car1;
         this.car2 = car2;
@@ -30,4 +43,5 @@ public class Race {
             winner = car2;
         }
     }
+
 }

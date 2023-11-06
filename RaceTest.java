@@ -7,7 +7,7 @@ public class RaceTest {
         int car1wins = 0;
         int car2wins = 0;
         for(int i = 0;i<5;i++){
-            System.out.println(race.simulateRace());
+            System.out.print(race);
         }
     }
 }
