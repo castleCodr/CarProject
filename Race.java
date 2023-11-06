@@ -44,4 +44,10 @@ public class Race {
         }
     }
 
+    @Override
+    public String toString() {
+        simulateRace();
+        String output = this.winner.getCarName() + ", " + car1.getCarName()  + " time: " + car1Time + ", " + car2.getCarName()  + " time: " + car2Time;
+        return output;
+    }
 }
