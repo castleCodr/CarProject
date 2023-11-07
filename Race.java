@@ -1,4 +1,6 @@
 public class Race {
+    public static final int secondsPerMinute = 60;
+    public static final int precision = 3;
     private Car car1;
     private Car car2;
     private Track track;
@@ -8,7 +10,14 @@ public class Race {
     private double car2Time;
     public static int car1wins = 0;
     public static int car2wins = 0;
-
+    public static String formatTime(double time){
+        time *= 60;
+        double seconds = time % secondsPerMinute;
+        int minutes = (int) time / secondsPerMinute;
+        double roundedSeconds = (int)(seconds*Math.pow(10,precision));
+        roundedSeconds = roundedSeconds/Math.pow(10,precision);
+        return minutes + " minutes, "+ roundedSeconds + " seconds";
+    }
     public Car getWinner() {
         return winner;
     }
@@ -39,6 +48,7 @@ public class Race {
         double car1Time = 0;
         double car2Time = 0;
         for(int i = 0;i<laps;i++){
+            track.newLap();
             car1Time += car1.lapTime(track);
             car2Time += car2.lapTime(track);
         }
@@ -58,8 +68,7 @@ public class Race {
 
     @Override
     public String toString() {
-        simulateRace();
-        String output = this.winner.getCarName() + ", " + car1.getCarName()  + " time: " + car1Time + ", " + car2.getCarName()  + " time: " + car2Time;
-        return output;
+        String output = "Winner: "+this.winner.getCarName() + "\n" + car1.getCarName()  + " time: " + car1Time + "\n" + car2.getCarName()  + " \n" + car2Time;
+        return output + "\n\n";
     }
 }

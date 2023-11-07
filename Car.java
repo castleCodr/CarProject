@@ -45,7 +45,7 @@ public class Car {
     public double lapTime(Track track){
         double time = 0;
         for(int i = 0;i < track.getDistance();i++){
-            time += 60/track.getSpeed(this);
+            time += 30/track.getSpeed(this);
         }
         return time;
     }

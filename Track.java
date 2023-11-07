@@ -4,10 +4,12 @@ public class Track {
         this.distance = distance;
         this.trackName = trackName;
     }
-
+    private int lapDifficulty;
     private int difficulty;
     private int distance;
-
+    public void newLap(){
+        lapDifficulty = (int)(difficulty*(Math.random()*.25+.875));
+    }
     public int getDifficulty() {
         return difficulty;
     }
@@ -37,13 +39,14 @@ public class Track {
     public double getSpeed(Car car) {
         double speed = car.getSpeedMph();
         double diffFactor = 0;
-        if(car.getHandling()>difficulty){
-            diffFactor = Math.pow(1.2, difficulty- car.getHandling());
+        if(car.getHandling()>lapDifficulty){
+            diffFactor = 1+Math.pow(5, lapDifficulty- car.getHandling());
         }
         else{
-            diffFactor = 1+Math.pow(2, difficulty- car.getHandling());
+            diffFactor = Math.pow(1.2, lapDifficulty- car.getHandling());
         }
-        speed *= 1/diffFactor;
+        System.out.println(lapDifficulty+"/"+diffFactor+"/" +difficulty);
+        speed *= 1/(diffFactor);
         speed += car.getVariability() * (Math.random() - .5) * speed;
         return speed;
     }
