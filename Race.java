@@ -6,9 +6,11 @@ public class Race {
     private Car winner;
     private double car1Time;
     private double car2Time;
+    private double car1Wins;
+    private double car2Wins;
 
-    public Car getWinner() {
-        return winner;
+    public String getWinner() {
+        return winner.getCarName();
     }
 
     public double getCar1Time() {
@@ -29,6 +31,7 @@ public class Race {
         double car1Time = 0;
         double car2Time = 0;
         for(int i = 0;i<laps;i++){
+            track.newLap();
             car1Time += car1.lapTime(track);
             car2Time += car2.lapTime(track);
         }
@@ -42,6 +45,9 @@ public class Race {
         else{
             winner = car2;
         }
-    }
 
+    }
+    public String toString(){
+        return "";
+    }
 }
