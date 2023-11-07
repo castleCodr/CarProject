@@ -6,6 +6,8 @@ public class Race {
     private Car winner;
     private double car1Time;
     private double car2Time;
+    public static int car1wins = 0;
+    public static int car2wins = 0;
 
     public Car getWinner() {
         return winner;
@@ -15,8 +17,16 @@ public class Race {
         return car1Time;
     }
 
+    public static int getCar1wins() {
+        return car1wins;
+    }
+
     public double getCar2Time() {
         return car2Time;
+    }
+
+    public static int getCar2wins() {
+        return car2wins;
     }
 
     public Race(Car car1, Car car2, Track track, int laps) {
@@ -38,9 +48,11 @@ public class Race {
         car2Time = Math.round(car2Time*100)/100.0;
         if(car1Time<car2Time){
             winner = car1;
+            car1wins++;
         }
         else{
             winner = car2;
+            car2wins++;
         }
     }
 
