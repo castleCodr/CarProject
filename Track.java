@@ -10,28 +10,8 @@ public class Track {
     public void newLap(){
         lapDifficulty = (difficulty*(Math.random()*.5+.75));
     }
-    public int getDifficulty() {
-        return difficulty;
-    }
-
-    public void setDifficulty(int difficulty) {
-        this.difficulty = difficulty;
-    }
-
     public int getDistance() {
         return distance;
-    }
-
-    public void setDistance(int distance) {
-        this.distance = distance;
-    }
-
-    public String getTrackName() {
-        return trackName;
-    }
-
-    public void setTrackName(String trackName) {
-        this.trackName = trackName;
     }
 
     private String trackName;

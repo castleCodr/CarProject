@@ -18,9 +18,6 @@ public class Race {
         roundedSeconds = roundedSeconds/Math.pow(10,precision);
         return minutes + " minutes, "+ roundedSeconds + " seconds";
     }
-    public Car getWinner() {
-        return winner;
-    }
 
     public double getCar1Time() {
         return car1Time;

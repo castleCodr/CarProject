@@ -15,33 +15,21 @@ public class Car {
         return speedMph;
     }
 
-    public void setSpeedMph(int speedMph) {
-        this.speedMph = speedMph;
-    }
 
     public double getHandling() {
         return handling;
     }
 
-    public void setHandling(int handling) {
-        this.handling = handling;
-    }
 
     public double getVariability() {
         return variability;
     }
 
-    public void setVariability(int variability) {
-        this.variability = variability;
-    }
 
     public String getCarName() {
         return carName;
     }
 
-    public void setCarName(String carName) {
-        this.carName = carName;
-    }
     public double lapTime(Track track){
         double time = 0;
         for(int i = 0;i < track.getDistance();i++){
