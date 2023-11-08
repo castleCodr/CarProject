@@ -54,8 +54,6 @@ public class Race {
         }
         this.car1Time = car1Time;
         this.car2Time = car2Time;
-        car1Time = Math.round(car1Time*100)/100.0;
-        car2Time = Math.round(car2Time*100)/100.0;
         if(car1Time<car2Time){
             winner = car1;
             car1wins++;
