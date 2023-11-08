@@ -68,7 +68,7 @@ public class Race {
 
     @Override
     public String toString() {
-        String output = "Winner: "+this.winner.getCarName() + "\n" + car1.getCarName()  + " time: " + car1Time + "\n" + car2.getCarName()  + " \n" + car2Time;
+        String output = "Winner: "+this.winner.getCarName() + "\n" + car1.getCarName()  + " time: " + Race.formatTime(car1Time) + "\n" + car2.getCarName()  + " time: " + Race.formatTime(car2Time);
         return output + "\n\n";
     }
 }

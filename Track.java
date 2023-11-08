@@ -4,11 +4,11 @@ public class Track {
         this.distance = distance;
         this.trackName = trackName;
     }
-    private int lapDifficulty;
+    private double lapDifficulty;
     private int difficulty;
     private int distance;
     public void newLap(){
-        lapDifficulty = (int)(difficulty*(Math.random()*.25+.875));
+        lapDifficulty = (difficulty*(Math.random()*.5+.75));
     }
     public int getDifficulty() {
         return difficulty;
@@ -45,7 +45,6 @@ public class Track {
         else{
             diffFactor = Math.pow(1.2, lapDifficulty- car.getHandling());
         }
-        System.out.println(lapDifficulty+"/"+diffFactor+"/" +difficulty);
         speed *= 1/(diffFactor);
         speed += car.getVariability() * (Math.random() - .5) * speed;
         return speed;
