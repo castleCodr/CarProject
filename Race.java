@@ -10,6 +10,12 @@ public class Race {
     private double car2Time;
     public static int car1wins = 0;
     public static int car2wins = 0;
+
+    /**
+     *
+     * @param time the time in seconds as a double
+     * @return a String with the formatted time to the precision set in the static variable precision
+     */
     public static String formatTime(double time){
         time *= 60;
         double seconds = time % secondsPerMinute;
@@ -41,6 +47,10 @@ public class Race {
         this.track = track;
         this.laps = laps;
     }
+
+    /**
+     * Simulates one race of the 2 instance cars on the instance track
+     */
     public void simulateRace(){
         double car1Time = 0;
         double car2Time = 0;
@@ -61,6 +71,10 @@ public class Race {
         }
     }
 
+    /**
+     * Returns the race details as a formatted string
+     * @return
+     */
     @Override
     public String toString() {
         String output = "Winner: "+this.winner.getCarName() + "\n" + car1.getCarName()  + " time: " + Race.formatTime(car1Time) + "\n" + car2.getCarName()  + " time: " + Race.formatTime(car2Time);

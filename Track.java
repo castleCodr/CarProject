@@ -16,6 +16,11 @@ public class Track {
 
     private String trackName;
 
+    /**
+     *
+     * @param car the car to get the speed of
+     * @return the speed of the car on this distance unit of this lap  as a double
+     */
     public double getSpeed(Car car) {
         double speed = car.getSpeedMph();
         double diffFactor = 0;

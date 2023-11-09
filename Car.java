@@ -30,7 +30,13 @@ public class Car {
         return carName;
     }
 
+    /**
+     *
+     * @param track the track to run on
+     * @return the time to go one lap on this track as a double
+     */
     public double lapTime(Track track){
+
         double time = 0;
         for(int i = 0;i < track.getDistance();i++){
             time += 30/track.getSpeed(this);
