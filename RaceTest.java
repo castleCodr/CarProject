@@ -21,6 +21,6 @@ public class RaceTest {
         System.out.println(car2.getCarName());
         System.out.println("\t"+"Average Time: "+Race.formatTime(car2Time/races));
         System.out.println("\t"+"Odds To Win: "+(Race.getCar2wins()/races*100)+"%");
-
+        System.out.println("Average Difficulty: " + Track.findAvgDiffculty(races));
     }
 }

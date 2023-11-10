@@ -7,15 +7,24 @@ public class Track {
     private double lapDifficulty;
     private int difficulty;
     private int distance;
+    public static double totDiffculty;
     public void newLap(){
         lapDifficulty = (difficulty*(Math.random()*.5+.75));
+        totDiffculty += lapDifficulty;
     }
     public int getDistance() {
         return distance;
     }
 
     private String trackName;
-
+    /**
+     * This function returns the average diffculty of the laps
+     * @param races number of races
+     * @return average difficulty
+     */
+    public static double findAvgDiffculty(double races){
+        return totDiffculty/races;
+    }
     /**
      *
      * @param car the car to get the speed of
