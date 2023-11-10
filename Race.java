@@ -72,8 +72,13 @@ public class Race {
     }
 
     /**
-     * Returns the race details as a formatted string
-     * @return
+     *
+     *
+     * @return  Returns the race details as a formatted string in the form
+        Winner: [Car name of winner]
+        [Car Name of car1] time: [Formatted time of car1]
+        [Car Name of car2] time: [Formatted time of car2]
+     *
      */
     @Override
     public String toString() {
