@@ -1,3 +1,8 @@
+/**
+ * Stephen Peterson & Samuel Malcom
+ * Mr. Desteph's 5th period class
+ * This class creates 2 car objects, puts them in a race, and then calculates stats, such as odds of winning.
+ */
 public class RaceTest {
     public static void main(String[] args) {
         Car car1 = new Car(120,5,.5,"Lambo");

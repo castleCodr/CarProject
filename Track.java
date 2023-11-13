@@ -1,3 +1,8 @@
+/**
+ * Stephen Peterson & Samuel Malcom
+ * Mr. Desteph's 5th period class
+ * This class creates a track. It also allows us to get the speed of a car.
+ */
 public class Track {
     public Track(int difficulty, int distance, String trackName) {
         this.difficulty = difficulty;
