@@ -1,3 +1,8 @@
+/**
+ * Stephen Peterson & Samuel Malcom
+ * Mr. Desteph's 5th period class
+ * This class creates the car object, and creates the stats of a car. It also calculates lap time.
+ */
 public class Race {
     public static final int secondsPerMinute = 60;
     public static final int precision = 3;

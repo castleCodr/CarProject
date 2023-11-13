@@ -12,11 +12,13 @@ public class RaceTest {
         System.out.println(track1.getSpeed(car1));
         double car1Time = 0;
         double car2Time = 0;
-        double races = 1000;
+        int races = 1000;
         for(int i = 0;i<races;i++){
-            System.out.println("Race "+i);
             race.simulateRace();
-            System.out.println(race);
+            if(i%(races/10) == 0){
+                System.out.println("Race "+i);
+                System.out.println(race);
+            }
             car1Time += race.getCar1Time();
             car2Time += race.getCar2Time();
         }
