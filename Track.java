@@ -23,7 +23,7 @@ public class Track {
 
     private String trackName;
     /**
-     * This function returns the average diffculty of the laps
+     * This function returns the average difficulty of the laps
      * @param races number of races
      * @return average difficulty
      */
