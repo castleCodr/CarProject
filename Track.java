@@ -34,7 +34,7 @@ public class Track {
         double speed = car.getSpeedMph();
         double diffFactor = 0;
         if(car.getHandling()>lapDifficulty){
-            diffFactor = 1+Math.pow(5, lapDifficulty- car.getHandling());
+            diffFactor = 1+Math.pow(13, lapDifficulty- car.getHandling());
         }
         else{
             diffFactor = Math.pow(1.2, lapDifficulty- car.getHandling());

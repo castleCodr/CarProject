@@ -24,6 +24,15 @@ public class Race {
         roundedSeconds = roundedSeconds/Math.pow(10,precision);
         return minutes + " minutes, "+ roundedSeconds + " seconds";
     }
+    public static String getCarSpecs(Car car){
+        String output = "";
+        output += "\nMax Speed: " + car.getSpeedMph();
+        output += "\nVariation (bad on average): " + car.getVariability();
+        output += "\nHandling Rating: " + car.getHandling();
+        output += "\nOverall Rating: " + ((int)((car.lapTime(new Track(5,1000,""))/(25))-7))/100.0;
+        return output;
+    }
+
 
     public double getCar1Time() {
         return car1Time;

@@ -1,8 +1,8 @@
 public class RaceTest {
     public static void main(String[] args) {
-        Car car1 = new Car(100,6.0,.1,"Lambo");
-        Car car2 = new Car(100,6.0,.1,"Ferarri");
-        Track track1 = new Track(12,1000,"Indy 500");
+        Car car1 = new Car(120,5,.5,"Lambo");
+        Car car2 = new Car(100,10,.01,"Ferarri");
+        Track track1 = new Track(5,100,"Indy 500");
         Race race = new Race(car1,car2,track1,2);
         System.out.println(track1.getSpeed(car1));
         double car1Time = 0;
@@ -22,5 +22,8 @@ public class RaceTest {
         System.out.println("\t"+"Average Time: "+Race.formatTime(car2Time/races));
         System.out.println("\t"+"Odds To Win: "+(Race.getCar2wins()/races*100)+"%");
         System.out.println("Average Difficulty: " + Track.findAvgDiffculty(races));
+        System.out.println(car1.getCarName()+" Specs:\n"+Race.getCarSpecs(car1));
+        System.out.println(car2.getCarName()+" Specs:\n"+Race.getCarSpecs(car2));
+
     }
 }
